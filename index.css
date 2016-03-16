@@ -1,0 +1,161 @@
+body,figure{
+	margin:0;
+	padding:0;
+}
+#canvas{
+   display:block;
+   position: absolute;
+   left:50%;
+   top:50%;
+   margin-left: -160px;
+   margin-top: -284px;
+   border: 1px solid black;
+}
+.start,.cxstart{
+	width:120px;
+	height:40px;
+	border:3px solid white;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top:-80px;
+	margin-left: -60px;
+	color:white;
+	font-size: 22px;
+    line-height: 40px;
+    transition:all 0.6s ease 0s;
+}
+.cxstart{
+	text-align: center;
+	line-height: 40px;
+	display: none;
+}
+.start span{
+	display: inline-block;
+	margin:0px 18px;
+}
+.start:hover,.cxstart:hover{
+	border:3px solid blue;
+	color:blue;
+}
+
+
+
+.image-show-grid{
+	position: relative;
+	width: 3300px;
+	height:678px;
+	display: block;
+}
+.image-show-grid::after{
+	content: '';
+	display: block;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: 3300px 678px;
+	height: 678px;
+	width: 3300px;
+	background-image: url("images/haha.jpg");
+	-webkit-animation-duration: 160s;
+	animation-duration: 160s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: showGridAnimationAfterLarge;
+	animation-name: showGridAnimationAfterLarge;
+}
+.image-show-grid::before{
+	content: '';
+	display: block;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: 3300px 678px;
+	height: 678px;
+	width: 3300px;
+	background-image: url("images/haha.jpg");
+	-webkit-animation-duration: 160s;
+	animation-duration: 160s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: showGridAnimationBeforeLarge;
+	animation-name: showGridAnimationBeforeLarge;
+}
+@-webkit-keyframes showGridAnimationBeforeLarge {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0)
+	}
+
+	50% {
+		-webkit-transform: translate3d(-3300px, 0, 0);
+		transform: translate3d(-3300px, 0, 0)
+	}
+
+	50.001% {
+		-webkit-transform: translate3d(3300px, 0, 0);
+		transform: translate3d(3300px, 0, 0)
+	}
+
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0)
+	}
+}
+
+@keyframes showGridAnimationBeforeLarge {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0)
+	}
+
+	50% {
+		-webkit-transform: translate3d(-3300px, 0, 0);
+		transform: translate3d(-3300px, 0, 0)
+	}
+
+	50.001% {
+		-webkit-transform: translate3d(3300px, 0, 0);
+		transform: translate3d(3300px, 0, 0)
+	}
+
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0)
+	}
+}
+
+@-webkit-keyframes showGridAnimationAfterLarge {
+	0% {
+		-webkit-transform: translate3d(3300px, 0, 0);
+		transform: translate3d(3300px, 0, 0)
+	}
+
+	50% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0)
+	}
+
+	100% {
+		-webkit-transform: translate3d(-3300px, 0, 0);
+		transform: translate3d(-3300px, 0, 0)
+	}
+}
+@keyframes showGridAnimationAfterLarge {
+	0% {
+		-webkit-transform: translate3d(3300px, 0, 0);
+		transform: translate3d(3300px, 0, 0)
+	}
+
+	50% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0)
+	}
+
+	100% {
+		-webkit-transform: translate3d(-3300px, 0, 0);
+		transform: translate3d(-3300px, 0, 0)
+	}
+}
